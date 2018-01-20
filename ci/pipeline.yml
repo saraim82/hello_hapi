@@ -25,9 +25,9 @@ jobs:
       plan:
         - get: hello_api
           trigger: true
-          passed: [Install dependencies]
+          passed: [install_dependencies]
         - get: dependency-cache
-          passed: [Install dependencies]
+          passed: [install_dependencies]
         - task: run the test suite
           file: hello_hapi/ci/tasks/run_tests.yml
 

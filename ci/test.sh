@@ -10,5 +10,5 @@ echo "HELLO $(basename $DIR)"
 pushd $DIR
   fly -t ${fly_target} set-pipeline -p hello_api -c pipeline.yml -n
   fly -t ${fly_target} unpause-pipeline -p hello_api
-  #fly -t ${fly_target} trigger-job -w -j hello_api/job-install_dependencies
+  fly -t ${fly_target} trigger-job -w -j hello_api/install_dependencies
 popd
